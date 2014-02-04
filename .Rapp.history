@@ -1,0 +1,223 @@
+source("http://www.bio.umass.edu/biology/kunkel/pub/R/CuriousResult.R")
+demo(package = .packages(all.available = TRUE))
+demo(COLORS)
+Cc<-c(2.77, 1.53, 1.53, rep(0,3),1.53, 2.62, 1.77,rep(0,3),1.53,1.77,2.66,rep(0,6),0.42,rep(0,6),0.44,rep(0,6),0.44)
+Cc<-matrix(Cc,6,6)
+Cc
+|Cc|
+?dia
+?det
+det(Cc)
+.1 == .3/3
+1 == 3/3
+0.1 == 0.3/3
+seq(0,1,by=.1)
+seq(0,1,by=0.1)
+seq(0,1,by=0.1) == 0.3
+unique(c(.3,.4 - .1, .5 - .2, .6 - .3, .7 -.4))
+unique(c(0.3,0.4 - 0.1, 0.5 - 0.2, 0.6 - 0.3, 0.7 -0.4))
+quadratic.formula = function(a,b,c)#
+{rad<- b^2 -4 * a * c#
+    if(is.complex(rad) || all(rad >= 0)) {#
+          rad <- sqrt(rad)#
+     } else {rad<- sqrt(as.complex(rad))}#
+     cbind(-b -rad, -b + rad) / (2 * a)#
+}
+quadratic.formula(1, -5, 6)
+quadratic.formula(1, c(-5,1), 6)
+?Rprof
+c(1,4) + 1:10
+y<-1
+y<-1:10
+ans
+x<-1:10
+x<- -(1:10)
+ans <- NULL#
+for(i in 1:507980)#
+{ if(x[i] < 0) ans <- c(ans, y[i])}
+amat<-matrix(1:100,10,10)
+bmat#
+<-#
+matrix(NA,#
+nrow(amat)/2,#
+ncol(amat))#
+for(i#
+in#
+1:nrow(bmat))#
+bmat[i,]#
+<-#
+amat[2*i-1,]#
+*#
+amat[2*i,]
+bmat <- matrix(NA, nrow(amat)/2, ncol(amat))#
+for(i in 1:nrow(bmat)) bmat[i,] <- amat[2*i-1,] * amat[2*i,]
+bmat2<- amat[seq(1, nrow(amat), by=2),] * amat[seq(2, nrow(amat), by=2),]
+all.equal(bmat, bmat2)
+the.seq <- 1:4#
+which(outer(outer(the.seq,the.seq,'+'),the.seq,'+') == 6, arr.ind=TRUE)
+1:10
+rnorm(10)
+hist(rnorm(1:100))
+1
+23
+1;23
+11787
+01074
+22 kim avenue
+'22 Kim Avenue'
+A='22 Kim Avenue'
+8000/60/60
+3*24000/60/60
+10*101*2.75/60/60
+read.csv("http://www.bio.umass.edu/biology/kunkel/LabWiki/images/7/77/Newport_bracket01.txt")
+XX=read.csv("http://www.bio.umass.edu/biology/kunkel/LabWiki/images/7/77/Newport_bracket01.txt")
+XX=read.csv("http://www.bio.umass.edu/biology/kunkel/LabWiki/images/7/77/Newport_bracket01.txt", headers=FALSE)
+XX=read.csv("http://www.bio.umass.edu/biology/kunkel/LabWiki/images/7/77/Newport_bracket01.txt", header=FALSE)
+names(XX)
+attach(XX)
+plot(V1,V2)
+text(V1[1],V2[1],'begin')
+text(V1[1],V2[1],'begin', side=1)
+?text
+text(V1[1],V2[1],'begin', pos=1)
+plot(V1,V2,typ='b')
+ls()
+rm(list=ls())
+source("http://www.bio.umass.edu/biology/kunkel//pub/lobster/Rjoe/R8Oct03/CanalMap_area2ab_URL.R")
+source("http://www.bio.umass.edu/biology/kunkel/pub/lobster/Rjoe/R8Oct03/CanalMap_area2ab_URL.R")
+rnorm(100)
+plot(rnorm(10),rnorm(10),typ='l')
+plot(rnorm(10),rnorm(10),typ='b')
+plot(runif(100),runif(100),typ='b')
+plot(rnorm(3),runif(3),typ='b')
+plot(rnorm(3),rnorm(3),typ='b')
+plot(rnorm(100),rnorm(100),typ='b')
+plot(rnorm(100),runif(100),typ='b')
+plot(rnorm(1000),runif(1000),typ='b')
+demo
+demo()
+demo(colors)
+require(geomorph)
+11.28 * 12.99
+12.71/11.28
+2*12.71/11.28
+??canopy
+22+45-5+7+1+89
+(100+64)==(54+345+1000-23+900)
+100+64+54+345+1000-(23+900)
+123456789+123456789=
+0
+123456789+123456789
+456+980-34-76+890+123-54
+1000+4000+23443+5437657
+require(plotrix)
+xy.mat<-cbind(sample(1:10,200,TRUE),sample(1:10,200,TRUE))#
+ clusteredpoints<-#
+  cluster.overplot(xy.mat,col=rep(c("red","green"),each=100))#
+ plot(clusteredpoints,col=clusteredpoints$col,#
+  main="Cluster overplot test")
+y<-runif(5)
+ulim<-runif(5)#
+ llim<-runif(5)#
+ uinner<-ulim/2#
+ linner<-llim/2#
+ box.heresy(y,uinner=uinner,linner=linner,ulim=ulim,llim=llim,#
+  intervals=TRUE,main="The heretical boxplot",#
+  xlab="Number of observations",ylab="Value")
+testcp<-list("",40)#
+ for(i in 1:40) testcp[[i]]<-rnorm(sample(1:8,1)*50)#
+ segs<-get.segs(testcp)#
+ centipede.plot(segs,main="Test centipede plot",vgrid=0)#
+ # now leave out the number of valid observations, pass x labels and no right labels#
+ centipede.plot(segs[1:3,],main="Test centipede plot",vgrid=0,mar=c(4,5,3,2),#
+  left.labels=paste("X",1:40,sep=""),right.labels=rep("",40))
+data(mtcars)#
+ mysubset<-mtcars[substr(dimnames(mtcars)[[1]],1,1)=="M",c("mpg","hp","wt","disp")]#
+ diamondplot(mysubset)
+x<-list(runif(90,1,3),factor(sample(LETTERS[1:10],100,TRUE)),rnorm(80,mean=5))#
+ dendroPlot(x,xlab="Groups",ylab="Value of x",main="Test dendroPlot I")#
+ # now apply a nudge factor and different breaks#
+ dendroPlot(x,breaks=list(8,10,10),nudge=c(0.05,0.1),#
+  xlab="Groups",ylab="Value of x",main="Test dendroPlot II")
+data(iris)#
+ehplot(iris$Sepal.Length, iris$Species, intervals=20, cex=1.8, pch=20);browser()#
+ehplot(iris$Sepal.Width, iris$Species, intervals=20, box=TRUE, median=FALSE);browser()#
+ehplot(iris$Petal.Length, iris$Species, pch=17, col="red", log=TRUE);browser()#
+ehplot(iris$Petal.Length, iris$Species, offset=0.06, pch=as.numeric(iris$Species))
+rnd <- sample(150)#
+plen <- iris$Petal.Length[rnd]#
+pwid <- abs(rnorm(150, 1.5))#
+spec <- iris$Species[rnd]#
+ehplot(plen, spec, pch=19, cex=pwid, col=rainbow(3, alpha=0.6)[as.numeric(spec)])
+rnd <- sample(150)#
+plen <- iris$Petal.Length[rnd]#
+pwid <- abs(rnorm(150, 1.1))#
+spec <- iris$Species[rnd]#
+ehplot(plen, spec, pch=19, cex=pwid, col=rainbow(3, alpha=0.6)[as.numeric(spec)])
+rnd <- sample(150)#
+plen <- iris$Petal.Length[rnd]#
+pwid <- abs(rnorm(150, 0.9))#
+spec <- iris$Species[rnd]#
+ehplot(plen, spec, pch=19, cex=pwid, col=rainbow(3, alpha=0.6)[as.numeric(spec)])
+rnd <- sample(150)#
+plen <- iris$Petal.Length[rnd]#
+pwid <- abs(rnorm(150, 0.5))#
+spec <- iris$Species[rnd]#
+ehplot(plen, spec, pch=19, cex=pwid, col=rainbow(3, alpha=0.6)[as.numeric(spec)])
+rnd <- sample(150)#
+plen <- iris$Petal.Length[rnd]#
+pwid <- abs(rnorm(150, 1.2))#
+spec <- iris$Species[rnd]#
+ehplot(plen, spec, pch=19, cex=pwid, col=rainbow(3, alpha=0.6)[as.numeric(spec)])
+set.seed(42)#
+x <- rpois(100,10)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(100,10)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(100,20)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(1000,50)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(20,50)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(10000,50)#
+dotplot.mtb(x,main="No y-axis.")
+x <- rpois(10000,50)#
+dotplot.mtb(x)
+1+5+2+5+4+5+710+56+90+53
+source("SeeABG_2_wiki.R")
+source("SeeABG_2_fix.R")
+source("SeeABG_2_fix0.R")
+dir()
+Grp1=c(1:12,13:22,NA)
+Grp1=c(1:12,13:22,null)
+length(1)
+??'empty set'
+Grp1=c(1:12,13:22,NULL)
+Grp1
+Grp2
+e3
+isna
+b1
+e1
+b2
+e2
+b3
+t1
+s1
+t2
+s2
+t3
+s3
+grp1
+grp2
+grp3
+XXX[,1]
+v1
+v2
+v3
+max(z)
+lGrps
+detach(XXX)
+detach(XX)
+source("SeeABG_1_fix0.R")
